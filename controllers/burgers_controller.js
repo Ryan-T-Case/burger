@@ -9,3 +9,6 @@ var router = express.Router();
 router.get("/", function (req, res) {
     res.render("index");
 });
+
+//Export our routes to the server
+module.exports = router
