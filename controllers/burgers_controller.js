@@ -15,5 +15,12 @@ router.get("/", function (req, res) {
     });
 });
 
+router.put('/burgers/update', function(req, res) {
+    burger.update(req.body.burger_id, function(result) {
+        console.log(result);
+        res.redirect('/');
+    });
+});
+
 //Export our routes to the server
 module.exports = router
